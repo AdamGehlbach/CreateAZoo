@@ -178,6 +178,7 @@ public class PeopleMenu {
 
             Employee newEmployee = new Employee(employeeAge,employeeName,employeeGender,employeeRace,employeeNumber,employeeTitle,employeeHireDate);
 
+            //TODO Add Employee to Employee List
 
         } else if (location == 2) {
 
