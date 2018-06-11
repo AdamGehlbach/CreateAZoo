@@ -1,11 +1,15 @@
 package com.interapt.skills.people;
 
+import java.util.List;
+
 public class Employee extends People {
 
     private int employeeNumber;
     private String jobTitle;
     private String hireDate;
     private int hours;
+
+    private List<Employee> employeeList;
 
     public Employee(int age, String name, char gender, String race, int employeeNumber, String jobTitle, String hireDate) {
         super(age, name, gender, race);

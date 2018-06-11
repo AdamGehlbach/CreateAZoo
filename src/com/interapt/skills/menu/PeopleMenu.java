@@ -1,5 +1,7 @@
 package com.interapt.skills.menu;
 
+import com.interapt.skills.people.Employee;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -64,6 +66,7 @@ public class PeopleMenu {
             switch (input.nextInt()) {
                 case 1:
                     //Create new Employee
+                    createPerson(2);
                     break;
                 case 2:
                     //View All Employees
@@ -99,27 +102,27 @@ public class PeopleMenu {
 
     private void manageVisitor() {
 
-        System.out.println("You are in the Vistor Menu" +
+        System.out.println("You are in the Visitor Menu" +
                 "\nWhat would you like to do:" +
-                "\n1. Create New Vistor" +
-                "\n2. View All Vistors" +
-                "\n3. Remove an Vistor" +
-                "\n4. Edit an Vistor" +
+                "\n1. Create New Visitor" +
+                "\n2. View All Visitors" +
+                "\n3. Remove an Visitor" +
+                "\n4. Edit an Visitor" +
                 "\n5. Go back" +
                 "\n6. Exit Program");
         try {
             switch (input.nextInt()) {
                 case 1:
-                    //Create new Vistor
+                    //Create new Visitor
                     break;
                 case 2:
-                    //View All Vistors
+                    //View All Visitors
                     break;
                 case 3:
-                    //Remove Vistor
+                    //Remove Visitor
                     break;
                 case 4:
-                    //Edit Vistor
+                    //Edit Visitor
                     break;
                 case 5:
                     //Go Back
@@ -145,5 +148,39 @@ public class PeopleMenu {
 
     }
 
+    private void createPerson(int location) {
 
-}
+        //If location == 1, new Employee, if location == 2, new Visitor
+        if(location == 1) {
+
+            System.out.println("What is the employee's age?");
+            int employeeAge = input.nextInt();
+            input.nextLine();
+            System.out.println("What is the employee's name");
+            String employeeName = input.nextLine();
+            System.out.println("What gender is the employee?");
+            char employeeGender = input.nextLine().charAt(0);
+            System.out.println("What is the employee's race?");
+            String employeeRace = input.nextLine();
+            System.out.println("What is the employee's number?");
+            int employeeNumber = input.nextInt();
+            input.nextLine();
+            System.out.print("What is the employee's job title?");
+            String employeeTitle = input.nextLine();
+            System.out.print("What is the employee's hire date?");
+            String employeeHireDate = input.nextLine();
+
+
+
+
+
+
+
+            Employee newEmployee = new Employee(employeeAge,employeeName,employeeGender,employeeRace,employeeNumber,employeeTitle,employeeHireDate);
+
+
+        } else if (location == 2) {
+
+    }
+
+}}
