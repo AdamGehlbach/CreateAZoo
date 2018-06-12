@@ -52,6 +52,8 @@ public class Employee extends People {
         employeeList.add(newEmployee);
         System.out.println(newEmployee.getName() + " has been added");
 
+        //lists are apart of a collotion
+
     }
 
 }
